@@ -139,3 +139,6 @@ This is a simple **Task Management App** built with **React** and **Next.js**. I
       └── tsconfig.json # TypeScript configuration
 
 
+## Thanks and Regards 
+ - Aman Panwar
+
