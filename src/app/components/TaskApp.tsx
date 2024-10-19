@@ -1,12 +1,12 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import SearchBar from './SearchBar';
-import AddTask from './AddTask';
+import SearchBar from './subcomponents/SearchBar';
+import AddTask from './subcomponents/AddTask';
 import { RiMenuSearchLine, RiCloseLine } from "react-icons/ri";
-import TaskList from './TaskList';
-import EditTask from './EditTask';
-import CompletedTask from './CompletedTask';
-import Modal from './Modal';
+import TaskList from './subcomponents/TaskList';
+import EditTask from './subcomponents/EditTask';
+import CompletedTask from './subcomponents/CompletedTask';
+import Modal from './subcomponents/Modal';
 
 type Task = {
   title: string;
