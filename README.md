@@ -92,6 +92,21 @@ This is a simple **Task Management App** built with **React** and **Next.js**. I
 - Click the **Search** icon to open the search bar.
 - Type in the task title or description to filter tasks.
 
+
+### Sorting Description
+- In this TaskList component, tasks are sorted by priority using the sortByPriority function. Here's how it works:
+
+- Task Priority Mapping: The function creates an object, priorityOrder, which maps each priority level to a numeric value:
+   - "High" priority is assigned a value of 1.
+   - "Medium" is assigned 2.
+   - "Low" is assigned 3.
+
+- Sorting Logic: The function sorts the tasks array using JavaScript's sort() method. It compares two tasks (a and b) at a time, using the numeric values from priorityOrder to determine the order:
+
+- If task a has a higher priority (i.e., a lower numeric value in priorityOrder), it will come before task b.
+- This way, tasks with "High" priority will appear first, followed by "Medium", and finally "Low".
+- The function returns a sorted array of tasks, ensuring that higher-priority tasks are listed before lower-priority ones in the rendered output.
+
 ## Directory Structure
     JoshTalks/ 
     │ ├── .next/ # Next.js build directory 

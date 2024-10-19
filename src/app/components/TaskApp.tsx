@@ -103,14 +103,6 @@ const TaskApp = () => {
               onToggleCompletion={toggleTaskCompletion}
               isEditing={isEditing}
             />
-{/* 
-            {isEditing && editingTaskIndex !== null && (
-              <EditTask
-                task={tasks[editingTaskIndex]}
-                onSave={()=>handleSaveEditedTask}
-                onCancel={() => setEditingTaskIndex(null)}
-              />
-            )} */}
 
             {completedTasks.length !== 0 && (
               <CompletedTask completedTasks={completedTasks} onDelete={handleDeleteCompletedTask} />
