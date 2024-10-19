@@ -4,6 +4,7 @@ type Task = {
   title: string;
   description: string;
   priority: string;
+  completed: boolean;
 };
 
 type EditTaskProps = {
@@ -18,7 +19,7 @@ const EditTask: React.FC<EditTaskProps> = ({ task, onSave, onCancel }) => {
   const [priority, setPriority] = useState(task.priority);
 
   const handleSubmit = () => {
-    onSave({ title, description, priority });
+    onSave({ title, description, priority, completed: task.completed });
   };
 
   return (

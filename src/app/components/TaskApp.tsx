@@ -111,7 +111,7 @@ const TaskApp = () => {
           {isEditing && editingTaskIndex !== null && (
             <EditTask
               task={tasks[editingTaskIndex]}
-              onSave={()=>handleSaveEditedTask}
+              onSave={handleSaveEditedTask}
               onCancel={() => {
                 setEditingTaskIndex(null);
                 setIsModalOpen(false); // Close modal on cancel

@@ -1,12 +1,6 @@
 import React from 'react';
 import { RiDeleteBinLine } from "react-icons/ri";
 
-type Task = {
-  title: string;
-  description: string;
-  priority: string;
-  completed: boolean;
-};
 
 type CompletedTaskProps = {
   completedTasks: any[];
