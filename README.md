@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Task Management App
 
-## Getting Started
+This is a simple **Task Management App** built with **React** and **Next.js**. It allows users to manage their tasks by adding, editing, deleting, and marking tasks as completed. Tasks are dynamically sorted by priority, and completed tasks are displayed at the bottom of the list. This app also supports server-side rendering for initial task loading and is styled using basic CSS for a responsive design.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Add, Edit, Delete, and Mark Tasks as Completed**
+   - Add a task with a title, description, and priority (high, medium, low).
+   - Edit an existing task.
+   - Mark a task as completed or pending.
+   - Delete tasks from the list.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Task Sorting by Priority**
+   - Tasks are sorted dynamically based on priority (high, medium, low).
+   - High priority tasks are displayed at the top, followed by medium and low priority.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Server-Side Rendering (SSR) with Next.js**
+   - The initial list of tasks is loaded using Next.js’ `getServerSideProps` function.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **Responsive Design**
+   - Basic responsive UI to ensure the app looks good on both desktop and mobile devices.
+   - Tasks are color-coded by priority (red for high, yellow for medium, green for low).
+   - Completed tasks are displayed at the bottom.
 
-## Learn More
+5. **Search Functionality**
+   - A search bar allows filtering tasks by title or description.
+   - Tasks can be searched while dynamically updating the displayed task list.
 
-To learn more about Next.js, take a look at the following resources:
+6. **Modal for Editing Tasks**
+   - Editing a task opens a modal for users to make changes and save them.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+7. **Bonus Features**
+   - **Local Storage**: Persist tasks between page reloads using local storage.
+   - **Search Feature**: Filter tasks by title or description using a search bar.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technologies Used
 
-## Deploy on Vercel
+- **React**: For building the UI components and managing state.
+- **Next.js**: For server-side rendering and managing the app's routes.
+- **TypeScript**: For type safety and better code maintainability.
+- **Tailwind CSS**: For styling the app and making it responsive.
+- **React Icons**: For intuitive icons in the search and other UI elements.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Installation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Clone the repository**:
+   ```bash
+   https://github.com/amancoder17/JoshTalks.git
+
+2. Navigate to the project directory:
+
+    ```bash
+    cd JoshTalks
+    ```
+
+3. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+4. Run the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
+
+## How It Works
+
+### Adding a Task
+
+- Use the input fields in the "Add Task" form to provide the task’s title, description, and priority.
+- Click the **Add** button to add the task to the list.
+
+### Editing a Task
+
+- Click on the **Edit** icon next to any task to open the modal with the task details.
+- Make the necessary changes and click **Save** to update the task.
+
+### Deleting a Task
+
+- Click the **Delete** icon next to any task to remove it from the list.
+
+### Marking a Task as Completed
+
+- Click the checkbox next to any task to toggle between completed and pending states.
+
+### Searching for Tasks
+
+- Click the **Search** icon to open the search bar.
+- Type in the task title or description to filter tasks.
+
+## Directory Structure
+    JoshTalks/ 
+    │ ├── .next/ # Next.js build directory 
+      ├── node_modules/ # Node.js packages 
+      ├── src/ 
+      │ ├── app/ 
+      │ │ ├── components/ 
+      │ │ │ ├── subcomponents/ 
+      │ │ │ │ ├── AddTask.tsx 
+      │ │ │ │ ├── CompletedTask.tsx 
+      │ │ │ │ ├── EditTask.tsx 
+      │ │ │ │ ├── Modal.tsx 
+      │ │ │ │ ├── SearchBar.tsx 
+      │ │ │ │ └── TaskList.tsx 
+      │ │ │ ├── TaskApp.tsx 
+      │ │ ├── fonts/ # Custom fonts 
+      │ │ ├── favicon.ico 
+      │ │ ├── globals.css # Global styles 
+      │ │ ├── layout.tsx # Layout component 
+      │ │ └── page.tsx # Main page 
+      ├── .eslintrc.json # ESLint configuration 
+      ├── .gitignore # Git ignore rules 
+      ├── next-env.d.ts # Next.js types 
+      ├── next.config.mjs # Next.js configuration 
+      ├── package-lock.json 
+      ├── package.json # Project dependencies 
+      ├── postcss.config.mjs # PostCSS configuration 
+      ├── README.md 
+      ├── tailwind.config.ts # Tailwind CSS configuration 
+      └── tsconfig.json # TypeScript configuration
+
+
